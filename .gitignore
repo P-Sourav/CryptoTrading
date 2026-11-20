@@ -1,0 +1,56 @@
+# ===== Secrets / environment files (never commit) =====
+.env
+.env.*
+*.env
+!.env.example
+!.env.docker.example
+!**/env.example
+
+# Private notes (contains database credentials)
+**/todo.TODO
+*.TODO
+
+# Keys and certificates
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+*credentials*.json
+**/service-account*.json
+
+# ===== Build output =====
+**/target/
+**/build/
+**/out/
+.mvn/wrapper/maven-wrapper.jar
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot generated help file
+**/HELP.md
+
+# ===== Logs / temp =====
+*.log
+logs/
+*.tmp
+*.swp
+
+# ===== IDE / editor =====
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated
+.springBeans
+.sts4-cache
+nbproject/private/
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+desktop.ini

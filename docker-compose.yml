@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    # This will load environment variables from .env.docker for the 'app' service
+    env_file:
+      - .env.docker
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    # This will load environment variables from .env.docker for the 'mysql' service
+    env_file:
+      - .env.docker
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
